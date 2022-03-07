@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useFetch } from "../hooks/useFetch";
+import CharactersNav from "../components/Navbar/Navbar";
 import Search from "../components/Search";
 
 const contextDefault = {
@@ -26,7 +27,9 @@ export const CharactersProvider = ({ children }) => {
   const { results: charactersResults } = characters;
   return (
     <Provider value={{ charactersResults, loading, searchCharacter }}>
-      <Search />
+      <CharactersNav>
+        <Search />
+      </CharactersNav>
       {children}
     </Provider>
   );

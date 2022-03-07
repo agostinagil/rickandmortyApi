@@ -10,7 +10,7 @@ const CharactersView = () => {
       <Container>
         <Row>
           <div className="characters_header">
-            <h1>Rick and Morty's characters</h1>
+            <h1>Characters</h1>
           </div>
         </Row>
         <Row className="justify-content-center">

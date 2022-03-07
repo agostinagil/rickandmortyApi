@@ -1,5 +1,5 @@
 import { Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const CharactersList = ({ character }) => {
   return (
@@ -7,15 +7,18 @@ const CharactersList = ({ character }) => {
       <Card className="character__card">
         <Card.Img variant="top" src={character.image} />
         <Card.Body>
-          <Card.Title className="card-title__color">
-            <Link to={`characters/${character.id}`}>
+          <Card.Title>
+            <NavLink
+              to={`characters/${character.id}`}
+              className="card-title__color"
+            >
               <h5>{character.name}</h5>
-            </Link>
+            </NavLink>
           </Card.Title>
           <Card.Text>
             <div>
-              <span>Specie: {character.species}</span>
-              <span>State: {character.status}</span>
+              <p>Specie: {character.species}</p>
+              <p>State: {character.status}</p>
             </div>
           </Card.Text>
         </Card.Body>

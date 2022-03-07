@@ -13,8 +13,23 @@ const Search = () => {
     }
   };
   return (
+    <Form.Control
+      type="text"
+      value={item}
+      onKeyDown={handleSearch}
+      onChange={(e) => setItem(e.target.value.trim())}
+      placeholder="Buscar personaje"
+      data-testid="search"
+    />
+  );
+};
+
+export default Search;
+
+/*
+  return (
     <Row className="justify-content-center mt-4 mb-4">
-      <Col md={6}>
+      <Col>
         <Form.Control
           type="text"
           value={item}
@@ -27,5 +42,4 @@ const Search = () => {
     </Row>
   );
 };
-
-export default Search;
+*/
