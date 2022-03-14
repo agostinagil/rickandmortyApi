@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Col, Row, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { useCharacters } from "../contexts/CharactersContexts";
 
 const Search = () => {

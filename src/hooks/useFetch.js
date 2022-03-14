@@ -8,6 +8,7 @@ export const useFetch = (endpoint) => {
   const fetchData = useCallback(async () => {
     try {
       const { data } = await API.get(endpoint);
+
       setData(data);
       setLoading(false);
     } catch (error) {

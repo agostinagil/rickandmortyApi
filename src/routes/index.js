@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CharactersProvider } from "../contexts/CharactersContexts";
+
 import Characters from "../views/Characters/Characters";
 import Home from "../views/Home/Home";
 
