@@ -1,21 +1,24 @@
 import { Pagination } from "react-bootstrap";
 
-const Paginate = ({ next, prev, handlePage }) => {
+const Paginate = ({ prev, next, handlePage }) => {
   const nextUrl = () => {
-    const [, url] = next.split("?");
-    console.log(url);
-    handlePage(url);
+    const [, page] = next.split("?");
+    console.log(page);
+    handlePage(page);
   };
   const prevUrl = () => {
-    const [, url] = prev.split("?");
-    handlePage(url);
+    const [, page] = prev.split("?");
+    handlePage(page);
   };
   return (
-    <Pagination>
-      {prev && <Pagination.Prev onClick={prevUrl} />}
-      {next && <Pagination.Next onClick={nextUrl} />}
+    <Pagination size="lg" className="pag-btn">
+      {prev && (
+        <Pagination.Prev className={"paginationItemStyle"} onClick={prevUrl} />
+      )}
+      {next && (
+        <Pagination.Next className={"paginationItemStyle"} onClick={nextUrl} />
+      )}
     </Pagination>
   );
 };
-
 export default Paginate;

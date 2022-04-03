@@ -9,7 +9,7 @@ const contextDefault = {
   charactersResults: [],
   loading: false,
   searchCharacter: (item) => {},
-  paginationCharacters: {},
+  paginationCharacters: "character",
   handlePage: (endpoint) => {},
   // currentPage: 1
 };
@@ -23,19 +23,18 @@ export const CharactersProvider = ({ children }) => {
   const [character, setCharacter] = useState("");
   const [characters, loading] = useFetch(`/character/?name=${character}`);
   const [page, setPage] = useState("character");
-  const [{ info }] = useFetch(page);
+  const [pages] = useFetch(`character?${page}`);
 
   const handlePage = (newPage) => {
-    const pageNew = `character/?${newPage}`;
     navigate("/characters");
-    setPage(pageNew);
+    setPage(newPage);
   };
 
   const searchCharacter = (c) => {
     navigate("/characters");
     setCharacter(c);
   };
-
+  const { info: pageInfo } = pages;
   const { results: charactersResults } = characters;
   return (
     <Provider
@@ -43,7 +42,7 @@ export const CharactersProvider = ({ children }) => {
         charactersResults,
         loading,
         searchCharacter,
-        info,
+        pageInfo,
         handlePage,
       }}
     >
@@ -63,5 +62,3 @@ export const useCharacters = () => {
     );
   return context;
 };
-
-//linea 30 agrego el primer slash

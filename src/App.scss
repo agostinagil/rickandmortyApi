@@ -1,6 +1,10 @@
+@import "views/Home/Home.scss";
 @import "components/Characters/CharactersList.scss";
 @import "views/Characters/Characters.scss";
 @import "components/Navbar/Navbar.scss";
+@import "components/Pagination/Pagination.scss";
+@import "views/Login/Login.scss";
+@import "views/Signup/Signup.scss";
 .App {
   text-align: center;
 }

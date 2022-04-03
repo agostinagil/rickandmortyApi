@@ -1,0 +1,26 @@
+.register__cont {
+  display: flex;
+  justify-content: center;
+  height: 47.8rem;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+  background-image: url("../../assets/images/mainImage.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  .box__register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .register__box {
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: #fffffff3;
+    }
+  }
+}

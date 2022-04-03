@@ -1,0 +1,30 @@
+.login__container {
+  height: 47.8rem;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+  background-image: url("../../assets/images/mainImage.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  .row__classes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 6rem;
+    .form__box {
+      border-radius: 1rem;
+      padding: 1rem;
+
+      background-color: #fffffff3;
+
+      .text__color {
+        color: black;
+      }
+    }
+  }
+}

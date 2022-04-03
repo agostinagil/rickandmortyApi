@@ -1,7 +1,19 @@
 .character__separation {
   margin-bottom: 2rem;
-
-  .card-title__color {
-    color: #e89ac7;
+  .character__card {
+    justify-content: center;
+    text-align: center;
+    .card-title__color {
+      color: #bd7aa1;
+    }
+    .see_more_btn {
+      background-color: #dc9f8f;
+      border-color: #b67768;
+      margin-top: 0.8rem;
+    }
+    .see_more_btn:hover {
+      background-color: #6eb0bd;
+      border-color: #508b97;
+    }
   }
 }
